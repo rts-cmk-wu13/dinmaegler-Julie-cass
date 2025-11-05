@@ -1,5 +1,5 @@
 import React from 'react';
-import DanesImage from '../../assets/Image.png'; 
+import DanesImage from '../../assets/Image.png';
 import './danes.sass';
 
 
