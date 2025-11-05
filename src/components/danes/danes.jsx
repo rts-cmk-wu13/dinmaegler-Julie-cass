@@ -11,14 +11,14 @@ function Danes() {
       <div className="danes-container">
         <div className="danes-content">
           <div className="danes-header">
-            
+
             <div className="danes-text">
               <h2>Vi har fulgt danskerne hjem i snart 4 årtier</h2>
               <p>Det syntes vi siger noget om os!</p>
               <p>
                 It is a long established fact that a reader will be distracted by the
                 readable content of a page when looking at its layout. The point of
-                using Lorem Ipsum is that has a normal distribution.
+                using Lorem Ipsum is that has a normal distribution..
               </p>
             </div>
 
