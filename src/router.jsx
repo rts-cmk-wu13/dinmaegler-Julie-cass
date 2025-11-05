@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import List from "./pages/PropList.jsx";
 import Detail from "./pages/PropDetails.jsx";
 
+
 const Router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +23,11 @@ const Router = createBrowserRouter([
         path: "detail/:id",
         element: <Detail />,
       },
+ 
+    
+    
+    
+    
     ],
   },
 ]);
