@@ -1,12 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import MenuTop from "./menu_top.jsx";
-
-function menu() {
+import dinMaegler from "../../assets/Din_maegler.png";
+function Navigation() { 
     return (
         <>
-<MenuTop />
-            <nav className="header-menu">
+         <nav className="header-menu">
+            <NavLink><img className="Menu_Logo" src={dinMaegler} alt="" /></NavLink>
                 <ul className="menu">
                     <li className="menu_item"><NavLink className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""} to="/">Boliger til salg</NavLink></li>
@@ -23,5 +22,4 @@ function menu() {
             </nav>
         </>
     );
-}
-export default menu;
+} export default Navigation;    
