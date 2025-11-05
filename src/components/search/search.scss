@@ -1,0 +1,39 @@
+.search_bg_box{
+    background-image: url('../../assets/title_image.jpg');
+    padding: 19rem;
+
+
+    .searchform_bg{
+        background-color: white;
+        max-width: 900px;
+        width: 900px;
+       max-height: 202px;
+       padding: 1rem;
+
+       .search_box{
+        input{
+            width: 85%;
+            height: 3rem;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            font-size: 16px;
+            padding: 0 10px;
+        }
+        button{
+            width: 10%;
+            height: 3rem;
+            margin-left: 1rem;
+            background-color: #162A41;
+        }
+       }
+
+ }
+h1{
+    font-weight: bold;
+    text-align: center;
+    font-size: 3rem;
+}
+ button, h1{
+    color: white;
+ }
+}

@@ -1,0 +1,26 @@
+.top_bg {
+    background-color: #162A41;
+    padding: 0.5rem;
+
+    .top_menu {
+        max-width: 1000px; /* Adjust width for alignment */
+        margin: 0 auto; /* Center the menu */
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Align items vertically */
+            color: white;
+            font-size: 0.9rem; /* Adjust font size */
+        }
+
+        .top_item{
+            text-decoration: none;
+            list-style: none;
+            color: white;
+        }
+        div {
+            display: flex;
+            gap: 1rem; /* Add spacing between items */
+        }
+    }
+}
