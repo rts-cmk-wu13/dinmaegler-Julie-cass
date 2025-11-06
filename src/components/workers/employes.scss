@@ -1,0 +1,35 @@
+@use "./workers";
+
+.worker-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .home-w-btn {
+      display: inline-block;
+      border: none;
+      font-weight: 300;
+      font-size: 1rem;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #263048;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #263048;
+      }
+    }   
+  }
