@@ -1,0 +1,83 @@
+.newsletter-section {
+
+    position: relative;
+    background-image: url('../../assets/newsletter-bg.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 3rem 1.5rem; 
+    border-radius: 0.5rem; 
+    overflow: hidden;
+
+    margin-bottom: 5rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #153b5fc8; 
+      z-index: 1; 
+    }
+  
+
+    .newsletter-content {
+max-width: 69rem;
+width: 100%;
+        display: flex;
+        justify-content: center;
+margin-left: 7rem;
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
+  
+    .subscribe-txt{
+max-width: 30rem;
+text-align: center;
+    }
+  .email-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+
+    margin-top: 1.5rem;
+    border-radius: 6px;
+    padding: 0 10px;
+    width: 350px;
+    height: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .email-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .email-input::placeholder {
+    color: #888;
+  }
+  
+  .email-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #0d1b2a; /* dark navy arrow */
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .email-button:hover {
+    opacity: 0.8;
+  }
+
+  
+    
+}
