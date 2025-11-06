@@ -1,0 +1,132 @@
+.chosen-container
+  padding: 2rem
+  max-width: 1200px
+  
+  h2
+    text-align: center
+    margin-bottom: 2rem
+
+.chosen-section
+  padding: 4rem 2rem
+  max-width: 1200px
+  margin: 0 auto
+
+.chosen-header
+  text-align: center
+  margin-bottom: 3rem
+  
+  h2
+    font-size: 2rem
+    margin-bottom: 1rem
+    color: #2A2C30
+  
+  p
+    color: #7C8087
+    max-width: 600px
+    margin: 0 auto
+
+.properties-grid
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 2rem
+  margin-bottom: 3rem
+  max-width: 1200px
+
+
+.property-card
+  border: 1px solid #E8E8E8
+  border-radius: 4px
+  overflow: hidden
+  background: white
+  
+  .property-image
+    height: 270px
+    overflow: hidden
+    
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  .property-info
+    padding-bottom: 1rem
+    padding-left: 2rem
+    padding-right: 2rem
+    
+    h3
+      font-size: 1.2rem
+      margin-bottom: 0.5rem
+      color: #28292cff
+    
+    .location
+      color: #000000ff
+      margin-bottom: 1rem
+      font-size: 0.9rem
+    
+    .property-type
+      margin-bottom: 0.5rem
+      font-size: 0.9rem
+      
+      span
+        &:not(:last-child)
+          margin-right: 0.5rem
+    
+    .property-rooms
+        font-size: 0.9rem
+        justify-content: start
+        text-align: left
+        margin-right: auto
+
+    .property-details
+      margin-bottom: 1rem
+    
+    .property-price
+      display: flex
+      justify-content: space-between
+      align-items: center
+      
+      .energy-label
+        padding: 0.25rem 0.5rem
+        border-radius: 4px
+        margin-right: 1rem
+      
+      .price
+        font-weight: bold
+
+hr
+    border: none
+    height: 1px
+    background-color: #dbdbdbff
+    margin: 1rem 0
+
+
+.see-more
+  text-align: center
+  
+  .see-more-btn
+    background: #162A41
+    color: white
+    border: none
+    padding: 1rem 2rem
+    border-radius: 4px
+    cursor: pointer
+    font-weight: 500
+    
+
+.energy-label
+    color: #ffffffff
+    &[data-letter="A"]
+        background: #40ba2dff
+    &[data-letter="B"]
+        background: #89ba2dff
+    &[data-letter="C"]
+        background: #bad234ff
+    &[data-letter="D"]
+        background: #fcfc75ff
+    &[data-letter="E"]
+        background: #ffbf47ff
+    &[data-letter="F"]
+        background: #ff7002ff
+    &[data-letter="G"]
+        background: #ff1702ff
+    
