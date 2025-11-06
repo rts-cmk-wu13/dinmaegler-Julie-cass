@@ -1,15 +1,30 @@
-.search_bg_box{
+.search_bg_box {
     background-image: url('../../assets/title_image.jpg');
-    padding: 19rem;
-
-
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 60vh; /* make the background bigger */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centers vertically */
+    align-items: center; /* centers horizontally */
+    padding: 2rem;
+  
+    h1 {
+        text-align: center;
+      font-weight: bold;
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 2rem;
+    }
+  
     .searchform_bg{
         background-color: white;
         max-width: 900px;
         width: 900px;
        max-height: 202px;
        padding: 1rem;
-
+ 
        .search_box{
         input{
             width: 85%;
@@ -26,7 +41,7 @@
             background-color: #162A41;
         }
        }
-
+ 
  }
 h1{
     font-weight: bold;
@@ -37,3 +52,6 @@ h1{
     color: white;
  }
 }
+ 
+  
+  
