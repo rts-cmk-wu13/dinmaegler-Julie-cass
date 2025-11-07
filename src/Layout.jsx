@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Menu from "./components/headerNavi/menu.jsx";
+import Footer from "./components/footer/footer.jsx";
 
 function Layout() {
   return (
@@ -10,6 +11,8 @@ function Layout() {
       <main>
         <Outlet />
       </main>
+
+<Footer />
     </>
   );
 }
