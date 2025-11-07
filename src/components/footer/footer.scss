@@ -1,0 +1,161 @@
+.footer_bg {
+  background-color: #ffffff;
+  padding: 60px 0 0 0;
+  color: #1b1c1e;
+  
+
+
+  .footer_otherbg {
+    background-color: #f7f7f7;
+    display: grid;
+    grid-row: auto;
+    .footer_content {
+        display: grid;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        
+    .footer_info_quicklinks {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 40px;
+        max-width: 1200px;
+    
+    }
+
+      .footer_heading {
+        img {
+          width: 180px;
+          margin-bottom: 15px;
+        }
+
+        .footer_h3 {
+          font-size: 14px;
+          font-weight: 400;
+          color: #555;
+          line-height: 1.6;
+          margin: 0;
+        }
+      }
+
+      .footer_info {
+        
+        background-color: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        padding: 30px;
+        align-self: start;
+
+        .footer_info_item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 20px;
+          color: #1b1c1e;
+          gap: 12px;
+
+          .footer_icon {
+            background-color: #0a223d;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+          }
+
+          p {
+            margin: 0;
+            font-size: 13px;
+
+            &:first-of-type {
+              color: #6c757d;
+              font-size: 12px;
+            }
+
+            &:last-of-type {
+              font-weight: 500;
+              margin-top: 3px;
+            }
+          }
+        }
+
+        h3 {
+          font-size: 13px;
+          font-weight: 400;
+          color: #6c757d;
+          line-height: 1.5;
+          margin-top: 10px;
+        }
+      }
+
+      .footer_quicklinks {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-self: start; /* align top to match the info card */
+
+        h2 {
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+
+        li {
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            color: #1b1c1e;
+            font-size: 14px;
+            transition: 0.3s ease;
+
+            &:hover {
+              color: #0a223d;
+            }
+
+            &.active {
+              font-weight: 600;
+              color: #0a223d;
+            }
+          }
+        }
+
+        .footer_DMS {
+          margin-top: 9rem;
+
+          p {
+            font-size: 13px;
+            color: #6c757d;
+            margin: 0;
+
+            &:nth-child(2) {
+              font-weight: 600;
+              font-size: 18px;
+              color: #6c757d;
+            }
+
+            &:last-child {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer_Jit {
+  background-color: #0a223d;
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
