@@ -1,0 +1,70 @@
+.Ad-section {
+
+  background-color: #162A41;
+padding-top: 5rem;
+
+
+
+
+  .Ad-content {
+    display: flex;
+    justify-content: center;
+    max-width: 60rem;
+    width: 100%;
+
+    gap: 3rem;
+    margin-left: 18rem;
+
+    z-index: 2;
+    color: #fff;
+  }
+
+  
+.ad-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+
+    max-width: 20rem;
+}
+.ad-para{
+    font-size: 1.2rem;
+}
+  
+
+  //button
+  .btn-box {
+    display: flex;
+    max-width: 24.6rem;
+   gap: 2rem;
+
+    .Ad-button {
+      margin-top: 1.5rem;
+      border-radius: 0.2rem;
+      padding: 0.9rem 1.8rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+
+      &.apple {
+        background-color: #162A41;
+        color: white;
+        border: 1px solid white;
+      }
+
+      &.google {
+        background-color: white;
+        color: #162A41;
+        border: 1px solid #162A41;
+
+      }
+
+    }
+  }
+
+  .Ad-picture-container{
+    &img{
+    max-width: 22em;
+    max-height: 26em;
+  }
+  }
+}
