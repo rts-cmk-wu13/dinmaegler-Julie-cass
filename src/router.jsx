@@ -16,6 +16,10 @@ const Router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "Workers",
+        element: <Workers />,
+      },
+      {
         path: "list",
         element: <List />,
       },
@@ -23,11 +27,11 @@ const Router = createBrowserRouter([
         path: "detail/:id",
         element: <Detail />,
       }, 
-      {
+    /*   {
         path: "workers/:id",
         element: <Workers />,
       },
- 
+  */
     
     
     

@@ -8,10 +8,10 @@ function Navigation() {
             <NavLink><img className="Menu_Logo" src={dinMaegler} alt="" /></NavLink>
                 <ul className="menu">
                     <li className="menu_item"><NavLink className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""} to="/">Boliger til salg</NavLink></li>
+                        isPending ? "pending" : isActive ? "active" : ""} to="/List">Boliger til salg</NavLink></li>
 
                     <li className="menu_item"><NavLink className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""} to="/List">Mæglere</NavLink></li>
+                        isPending ? "pending" : isActive ? "active" : ""} to="/Workers">Mæglere</NavLink></li>
 
                     <li className="menu_item"><NavLink className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""} to="/">Mine favoritter</NavLink></li>
