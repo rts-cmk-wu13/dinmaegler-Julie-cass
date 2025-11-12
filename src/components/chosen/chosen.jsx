@@ -65,7 +65,7 @@ function Chosen() {
         ))}
       </div>
       <div className="see-more">
-        <button className="see-more-btn">Se alle boliger</button>
+        <NavLink to="/List"><button className="see-more-btn">Se alle boliger</button></NavLink>
       </div>
     </section>
   );
