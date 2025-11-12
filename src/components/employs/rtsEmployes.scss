@@ -1,11 +1,18 @@
-.homeP_worker_box {
+
+
+.workersP_worker_box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem; /* Adds spacing between cards */
+    cursor: pointer;
   
-    
+    max-width: 69rem;
+    margin: 0 auto;
     color: #263048;
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+
   
     .information_box {
       background-color: #ffffff;

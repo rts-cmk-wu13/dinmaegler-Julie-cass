@@ -1,9 +1,10 @@
 import React from "react";
-
+import Buildings from "../components/buildings/buildings.jsx";  
 function List() {
     return(
         <>
-<h1>List</h1>
+        <h2>search bar for buildings go here</h2>
+<Buildings />
         </>
     )
 }
