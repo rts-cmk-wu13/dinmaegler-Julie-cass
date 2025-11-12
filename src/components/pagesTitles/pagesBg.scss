@@ -1,0 +1,33 @@
+.pagesBg-container {
+    position: relative;
+    background-image: url('../../assets/001 1.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 3rem 1.5rem; 
+    overflow: hidden;
+
+    
+    margin-bottom: 5rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #153b5fc8; 
+      z-index: 1;}
+}
+
+.pagesBg-header{
+
+    width: 100%;
+    font-size: 4rem;
+        display: flex;
+        justify-content: center;
+      position: relative;
+      z-index: 2;
+      color: #fff;
+}

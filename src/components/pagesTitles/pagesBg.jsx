@@ -1,25 +1,32 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import "./pagesBg.scss";
+import { useLocation } from "react-router-dom";
 
-export default function pagesBg() {
+ function PagesBg() {
   const location = useLocation();
+  console.log(location.pathname);
+  let title = null;
+  switch (location.pathname) {
+    case "/List":
+    title = "Boliger til salg";
+      break;
 
-  const getpagesTitle = () => {
-    switch (location.pathname) {
-      
     case "/Workers":
-        return "Medarbejdere i Roskilde";
-    case "/list":
-        return "Boliger til salg";
+      title = "Medarbejdere i Roskilde";
+      break;
+
     case "/workers/:id":
-        return "Kontakt en medarbejder";
-      default:
-        return "Page";
-    }
-  };
+      title = "Kontakt en medarbejder";
+      break;
+
+
+    default:
+      title = "Velkommen til Din Mægler";
+  }
+
 return (
-    <section className="p-4 bg-blue-600 text-white flex justify-between">
-      <h1 className="text-xl font-bold">{getHeaderTitle()}</h1>
+    <section className="pagesBg-container">
+      <h1 className="pagesBg-header">{title}</h1>
     </section>
   );
-}
+}export default PagesBg;
