@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./chosen.scss";
 
+import { NavLink } from "react-router-dom";
 
 
 function Chosen() {
@@ -40,6 +41,7 @@ function Chosen() {
       
       <div className="properties-grid">
         {properties && properties.map(property => (
+          <NavLink to={`/properties/${property.id}`} key={property.id} className="property-card-link">
           <div key={property.id} className="property-card">
             <div className="property-image">
               <img src={property.images[0].url} alt={property.type} />
@@ -59,6 +61,7 @@ function Chosen() {
               </div>
             </div>
           </div>
+        </NavLink>
         ))}
       </div>
       <div className="see-more">
