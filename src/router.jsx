@@ -24,14 +24,14 @@ const Router = createBrowserRouter([
         element: <List />,
       },
       {
-        path: "",
+        path: "Detail",
         element: <Detail />,
       }, 
-    /*   {
-        path: "workers/:id",
-        element: <Workers />,
+      {
+        path: "worker/:id",
+        element: <Worker />,
       },
-  */
+  
     
     
     
