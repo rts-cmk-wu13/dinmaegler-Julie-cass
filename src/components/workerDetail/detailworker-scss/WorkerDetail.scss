@@ -1,0 +1,34 @@
+@use "./main.scss";
+
+.DetailWorker_p{
+    /* max-width: 69.3rem; */
+    display: flex;
+justify-content: center;
+
+margin-bottom: 7rem;
+
+}
+.rightSide{
+    max-width: 14.1rem;
+    
+}
+
+
+.leftSide{
+    max-width: 43rem;
+
+padding: 2rem;
+
+    border: 1px solid #D3DEE8;
+    border-radius: 0.5rem;
+
+
+     margin-right: 1.5rem;
+
+    img{
+        
+        
+        max-width: 17.5rem;
+        max-height: auto;
+    }
+}
