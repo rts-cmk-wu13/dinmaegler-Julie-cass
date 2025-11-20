@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
+import Prop from '../components/propdetail/prob';
 
 function Detail() {
-    return(
-        <>
-<h1>Detail</h1>
-        </>
-    )
+return(
+    <>
+    <Prop/>
+    </>
+)
 }
 export default Detail;
