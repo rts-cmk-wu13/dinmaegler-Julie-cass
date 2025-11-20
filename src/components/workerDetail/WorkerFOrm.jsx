@@ -1,28 +1,27 @@
 import React from "react";
-import { useState } from "react";
+import { useParams } from "react-router-dom";
+import useWorker from "./useWorker.jsx";
 
 import "./detailworker-scss/WorkerDetail.scss";
 
 
 function WorkerFOrm() {
-      const [name, setName] = useState("");
+const { id } = useParams();
+  const { worker, loading } = useWorker(id);
 
-  function handleChange(e) {
-    setName(e.target.value);
-  }
+  if (loading) return <p>Loading...</p>;
+  if (!worker) return <p>No worker found.</p>;
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    alert(name);
-  }
+
+
 
   return (
 <>
- 
+ <div className="form-card" key={worker.id}>
     
-     <h2 className="form-title">Kontakt Peter Sørensen</h2>
-<hr className="line"/>
-        <form className="contact-form">
+     <h2 className="form-title">Kontakt {worker.name}</h2>
+     <div className="name-underline"></div>
+ <form className="contact-form">
         
           <div className="row">
 
@@ -50,7 +49,7 @@ function WorkerFOrm() {
 
           <button type="submit" className="submit-btn">Send besked</button>
         </form>
-   
+   </div>
     
 </>
   );

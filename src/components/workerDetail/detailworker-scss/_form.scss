@@ -1,9 +1,17 @@
 .form-card {
-    /*   width: 650px; */
     padding: 2.8rem;
     border: 0.1rem solid #e5e7eb;
     border-radius: 0.6rem;
     background: #fff;
+    margin-top: 4rem;
+}
+
+.name-underline:after {
+    content: " ";
+    max-width: 4rem;
+    display: block;
+    border-bottom: 3px solid #0b1f36;
+    margin-bottom: 1.5rem;
 }
 
 .name-box {
@@ -20,8 +28,9 @@
 .form-title {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 1.3rem;
+
 }
+
 
 .contact-form .row {
     display: flex;

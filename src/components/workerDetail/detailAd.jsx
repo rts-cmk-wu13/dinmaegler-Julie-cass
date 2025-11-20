@@ -7,7 +7,7 @@ function DetailAd() {
    <h3>Find The Best</h3>
    <h3>Property</h3>
    <h3>For Rent Or Buy</h3>
-   <hr />
+  <div className="ad-underline"></div>
    <p>Call Us Now</p>
    <h3>+00 123 456 789</h3>
       </div>

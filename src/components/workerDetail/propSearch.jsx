@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { FaSearch } from "react-icons/fa";
+
 function PropSearch() {
     const [query, setQuery] = useState("");
 
@@ -12,10 +14,11 @@ function PropSearch() {
    <>
    <div className="detail_search_section">
    <h3>Search Property</h3>
-   <hr />
+  <div className="search-underline"></div>
 
-  <form onSubmit={handleSubmit}>
-    <input type="text" placeholder="Search..." value={query} onChange={(e) => setQuery(e.target.value)}/>
+  <form className="searchbar-form" onSubmit={handleSubmit}>
+    <FaSearch className="search-icon" aria-hidden="true" />
+    <input type="text" placeholder="Search..." value={query} onChange={(e) => setQuery(e.target.value)}  aria-label="Search"/>
   </form>
   
    </div>
