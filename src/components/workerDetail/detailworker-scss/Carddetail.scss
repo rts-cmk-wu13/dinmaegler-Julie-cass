@@ -1,0 +1,51 @@
+@use "./Desc.scss";
+
+.D_worker_info_box{
+    display: flex;
+    gap: 2rem;
+}
+
+.D_worker_image {
+    position: relative;
+    width: 280px;
+
+    img {
+        width: 100%;
+
+    }
+}
+
+
+.D_action_links {
+    position: absolute;
+    bottom: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    background-color: #162A41;
+    padding: 6px 12px;
+    border-radius: 0.1rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.D_worker_text_info{
+margin-left: 1.5rem;
+
+    .name{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .title{
+        font-size: 1.2rem;
+        color: #555555;
+    }
+
+    .phone, .email{
+        font-size: 1rem;
+        color: #333333;
+        display: flex;
+        align-items: center;
+   
+    }
+}

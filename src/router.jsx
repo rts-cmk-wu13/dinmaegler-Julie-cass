@@ -1,10 +1,14 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import Layout from "./Layout.jsx";
 import Home from "./pages/Home.jsx";
 import List from "./pages/PropList.jsx";
 import Detail from "./pages/PropDetails.jsx";
 import Workers from "./pages/Workers.jsx";
+
+import Worker from "./pages/worker.jsx";
+
 
 const Router = createBrowserRouter([
   {
@@ -12,11 +16,11 @@ const Router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "",
+        index: true,
         element: <Home />,
       },
       {
-        path: "Workers",
+        path: "workers",  // must be lowercase
         element: <Workers />,
       },
       {
@@ -26,18 +30,15 @@ const Router = createBrowserRouter([
       {
         path: "properties/:id",
         element: <Detail />,
-      }, 
+      },
       {
-        path: "worker/:id",
+        path: "workers/:id", // worker detail
         element: <Worker />,
       },
-  
-    
-    
-    
-    
     ],
   },
 ]);
+
+
  
 export default Router;
