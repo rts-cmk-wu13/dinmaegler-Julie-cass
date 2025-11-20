@@ -65,7 +65,7 @@ function Chosen() {
         ))}
       </div>
       <div className="see-more">
-        <NavLink to="/List"><button className="see-more-btn">Se alle boliger</button></NavLink>
+        <NavLink to="/List" onClick={() => window.scrollTo(0, 0)}><button className="see-more-btn">Se alle boliger</button></NavLink>
       </div>
     </section>
   );

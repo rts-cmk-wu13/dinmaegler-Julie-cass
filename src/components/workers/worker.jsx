@@ -36,7 +36,7 @@ function WorkerCard() {
       {WORKER.map((worker) => (
         <div className="information_box" key={worker.id}>
          
-          <NavLink className="worker_link" to={`${worker.id}`}>
+          <NavLink className="worker_link" to={`/workers/${worker.id}`} onClick={() => window.scrollTo(0, 0)}>
             <div className="worker_info_box">
               <div className="worker_image">
                 <img src={worker.image?.url} alt={worker.name} />

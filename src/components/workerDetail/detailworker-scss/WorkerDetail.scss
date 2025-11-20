@@ -1,4 +1,5 @@
 @use "./main.scss";
+@use "./form.scss";
 
 .DetailWorker_p{
     /* max-width: 69.3rem; */
@@ -14,21 +15,3 @@ margin-bottom: 7rem;
 }
 
 
-.leftSide{
-    max-width: 43rem;
-
-padding: 2rem;
-
-    border: 1px solid #D3DEE8;
-    border-radius: 0.5rem;
-
-
-     margin-right: 1.5rem;
-
-    img{
-        
-        
-        max-width: 17.5rem;
-        max-height: auto;
-    }
-}

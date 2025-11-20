@@ -1,0 +1,78 @@
+.form-card {
+    padding: 2.8rem;
+    border: 0.1rem solid #e5e7eb;
+    border-radius: 0.6rem;
+    background: #fff;
+    margin-top: 4rem;
+}
+
+.name-underline:after {
+    content: " ";
+    max-width: 4rem;
+    display: block;
+    border-bottom: 3px solid #0b1f36;
+    margin-bottom: 1.5rem;
+}
+
+.name-box {
+
+    width: 15rem;
+}
+
+.email-box {
+
+    width: 15rem;
+
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}
+
+
+.contact-form .row {
+    display: flex;
+    gap: 1.3rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.3rem;
+    flex: 1;
+}
+
+.field label {
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+}
+
+.field input,
+.field textarea {
+    padding: 12px 14px;
+    border: 0.1rem solid #d1d5db;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.submit-btn {
+    padding: 0.8rem 1.4rem;
+    background: #0b1f36;
+    color: white;
+    border: none;
+    border-radius: 0.1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.topic-box {
+    max-width: 35.6rem;
+    width: 35.6rem;
+}
+
+.message-box {
+    max-width: 35.6rem;
+    max-height: 13.6rem;
+}

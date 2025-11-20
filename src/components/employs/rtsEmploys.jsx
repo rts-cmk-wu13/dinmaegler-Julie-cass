@@ -45,7 +45,7 @@ function rtsWorkerCard() {
    <section className="workersP_worker_box">
   {RTSWORKER.map((RW) => (
     <div className="information_box" key={RW.id}>
-      <NavLink className="worker_link" to={`/workers/${RW.id}`}>
+      <NavLink className="worker_link" to={`/workers/${RW.id}`} onClick={() => window.scrollTo(0, 0)}>
         <div className="worker_info_box">
           <div className="worker_image">
             <img src={RW.image.url} alt={RW.name} />
