@@ -50,16 +50,16 @@ function Footer() {
 
                 <div className="footer_quicklinks">
                     <h2>Quick links</h2>
-                    <li className="menu_item"><NavLink className={({ isActive, isPending }) =>
+                    <li className="menu_item"><NavLink onClick={() => window.scrollTo(0, 0)} className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""} to="/">Boliger til salg</NavLink></li>
 
-                    <li className="menu_item"><NavLink className={({ isActive, isPending }) =>
+                    <li className="menu_item"><NavLink onClick={() => window.scrollTo(0, 0)} className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""} to="/List">Mæglere</NavLink></li>
 
-                    <li className="menu_item"><NavLink className={({ isActive, isPending }) =>
+                    <li className="menu_item"><NavLink onClick={() => window.scrollTo(0, 0)} className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""} to="/">Kontakt os</NavLink></li>
 
-                    <li className="menu_item"><NavLink className={({ isActive, isPending }) =>
+                    <li className="menu_item"><NavLink onClick={() => window.scrollTo(0, 0)} className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""} to="/">Log ind / bliv bruger</NavLink></li>
                     
                     <div className="footer_DMS">

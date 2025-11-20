@@ -14,7 +14,7 @@ function Employees() {
       </div>
 <WorkerCard />
 <div className="worker-header">
-<NavLink to="/workers"><button className="home-w-btn">Se alle mæglere</button></NavLink>
+<NavLink to="/workers" onClick={() => window.scrollTo(0, 0)}><button className="home-w-btn">Se alle mæglere</button></NavLink>
 </div>
 
               </>
