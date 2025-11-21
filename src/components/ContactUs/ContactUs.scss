@@ -6,7 +6,14 @@
 }
 .contact-p-txt{
     max-width: 40rem;
-    margin: 0 auto;
+   margin-left: 7rem; padding-bottom: 2rem;
+   
+   .title-underline{
+     content: " ";
+    max-width: 4rem;
+    display: block;
+    border-bottom: 3px solid #0b1f36;
+   }
 }
 .topPart {
     display: flex;
@@ -21,8 +28,10 @@
     border: 1px solid #d1d5db;
     border-radius: 0.4rem;
     padding: 1.5rem;
-    max-height:28rem ;
+   /*  max-height:28rem ; */
+
 }
+
 
 .contact-map{
     justify-items: start;

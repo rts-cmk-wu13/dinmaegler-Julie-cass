@@ -50,6 +50,21 @@ padding: 2rem;
 .D_worker_text_info{
 margin-left: 1.5rem;
 
+.name_heart {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem; // space between name and heart
+}
+
+.heart-icon {
+  font-size: 1.3rem;      // small like the screenshot
+  color: #162A41;  
+  background-color: #D3DEE8;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+
+}
     .name{
         font-size: 2rem;
         font-weight: 700;

@@ -16,6 +16,7 @@ function ContactUs() {
                 </div>
 
                 <div className="topPart">
+                    
                     <div className="side-contact">
                         <ContactForm />
                     </div>
