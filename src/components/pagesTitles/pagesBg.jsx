@@ -7,6 +7,11 @@ import { useLocation } from "react-router-dom";
   console.log(location.pathname);
   let title = null;
   switch (location.pathname) {
+    case "/Contact":
+    title = "Kontakt os";
+      break;
+
+
     case "/List":
     title = "Boliger til salg";
       break;

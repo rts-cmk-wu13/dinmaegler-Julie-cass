@@ -9,6 +9,7 @@ import Workers from "./pages/Workers.jsx";
 
 import Worker from "./pages/worker.jsx";
 
+import Contact from "./pages/Contact.jsx";
 
 const Router = createBrowserRouter([
   {
@@ -34,6 +35,9 @@ const Router = createBrowserRouter([
       {
         path: "workers/:id", // worker detail
         element: <Worker />,
+      },{
+        path: "Contact",
+        element: <Contact />,
       },
     ],
   },
