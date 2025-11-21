@@ -1,0 +1,29 @@
+@use "./sideinfo.scss";
+
+.contact-us-section {
+    max-width: 69.3rem; 
+    margin: 0 auto;
+}
+.contact-p-txt{
+    max-width: 40rem;
+    margin: 0 auto;
+}
+.topPart {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    margin-bottom: 6rem;
+}
+
+.side-contact,
+.side-info {
+    border: 1px solid #d1d5db;
+    border-radius: 0.4rem;
+    padding: 1.5rem;
+    max-height:28rem ;
+}
+
+.contact-map{
+    justify-items: start;
+}
