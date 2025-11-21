@@ -1,18 +1,36 @@
-.info-section{
-max-width:27.8rem ;
-    .info-Box{
-        text-align: center;
-        list-style: none;
-        text-decoration: none;
-        padding: 4rem;
+.info-section {
+    max-width: 27.8rem;
 
-        li{
-            background-color: black;
+    .info-Box {
+        max-width: 17.8rem;
+        max-height: 8.5rem;
+        text-align: center;
+        padding: 1rem;
+
+        button {
+            background-color: #162A41;
             color: white;
             border-radius: 5rem;
-            max-width: 1.2rem;
-          padding: 1rem;
+            border: none;
 
+            padding: 0.7rem;
+            font-size: 1rem;
         }
+
+        h3 {
+            font-size: 0.9rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+
+    .info-underline{
+          display: block;
+    height: 0.1rem;
+    background: #D3DEE8;
+    margin: 0.8rem auto;
+    border-radius: 0.1rem;
     }
 }
