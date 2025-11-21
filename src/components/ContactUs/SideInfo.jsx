@@ -10,7 +10,7 @@ function SideInfo() {
             <section className="info-section">
 
                 <div className="info-Box">
-                    <li><FaPhoneAlt /></li>
+                    <button><FaPhoneAlt /></button>
                     <h3>Ring til os</h3>
                     <p>++ 45 7070 4000</p>
                 </div>
@@ -18,7 +18,7 @@ function SideInfo() {
                 <div className="info-underline"></div>
 
                 <div className="info-Box">
-                    <li><SiMinutemailer /></li>
+                    <button><SiMinutemailer /></button>
                     <h3>Send en mail</h3>
                     <p>4000@dinmaegler.dk</p>
                 </div>
@@ -26,7 +26,7 @@ function SideInfo() {
                 <div className="info-underline"></div>
 
                 <div className="info-Box">
-                    <li><FaMapMarkerAlt /></li>
+                    <button><FaMapMarkerAlt /></button>
                     <h3>Besæg butikken</h3>
                     <p>Stændertorvet 78,</p>
                     <p>4000 Roskilde</p>

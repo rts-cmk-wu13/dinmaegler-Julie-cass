@@ -32,12 +32,15 @@ function ContactForm() {
                     <label>Besked</label>
                     <textarea className="Contact-message-box" placeholder="Skriv din besked her…" rows="6"></textarea>
                 </div>
+                <div className="Contact-field">
 <label className="checkbox">
   <input type="checkbox" className="my-checkbox" />
-  I agree to receive newsletters
+Ja tak, jeg vil gerne modtage Din Mæglers nyhedsbrev.
 </label>
-
+</div>
+<div className="Contact-btn-con">
                 <button type="submit" className="Contact-submit-btn">Send besked</button>
+                </div>
             </form>
 
         </>
