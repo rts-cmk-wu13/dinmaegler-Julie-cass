@@ -1,0 +1,159 @@
+.property-image{
+    height: 130%;
+    width: 100%;
+   
+    top: -15rem;
+}
+.property-image-wrapper{
+    overflow: hidden;
+    height: 48rem;
+    position: relative;
+}
+.property-details{
+    margin-top: 2rem;
+    gap: 2rem;
+    display: grid;
+  place-items: center;
+  margin-bottom: 15rem;
+}
+.propertyinnerdetails{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 26rem;
+    align-items: center;
+    place-items: center;
+}
+.all-thedetails{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 6rem; 
+}
+.align-together{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 2rem;
+}
+.lastdescription{
+    margin-top: 4rem;
+    width: 92rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+}
+.icons{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2rem 2rem 2rem 2rem;
+    gap: 2rem;
+}
+.picicon_img,.picicon_layers{
+    font-size: 48px;
+    color: #8f8f8f;
+}
+.picicon_pin,.picicon_heart{
+    font-size: 40px;
+    color: #8f8f8f;
+}
+.property-description {
+  line-height: 2.2;
+  width: 90%;
+}
+
+.property-description p {
+  margin-bottom: 1.5rem;
+  word-spacing: 0.1em;
+}
+
+hr{
+    width: 80%;
+    border: 0.5px solid #d3d9dd;
+}
+
+/* Gallery Modal */
+.gallery-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.gallery-modal {
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.gallery-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+}
+
+.gallery-close:hover {
+  color: #000;
+}
+
+.gallery-content {
+  width: 100%;
+}
+
+.gallery-content h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Make icons clickable */
+.icons svg {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icons svg:hover {
+  transform: scale(1.1);
+}
+
