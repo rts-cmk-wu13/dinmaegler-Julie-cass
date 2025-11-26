@@ -1,37 +1,49 @@
 import React from "react";
 import "./pagesBg.scss";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
- function PagesBg() {
+function PagesBg() {
   const location = useLocation();
-  console.log(location.pathname);
-  let title = null;
-  switch (location.pathname) {
+  const path = location.pathname;
+
+  // Title logic
+  let title = "";
+  switch (path) {
     case "/Contact":
-    title = "Kontakt os";
+      title = "Kontakt os";
       break;
-
-
     case "/List":
-    title = "Boliger til salg";
+      title = "Boliger til salg";
       break;
-
     case "/Workers":
       title = "Medarbejdere i Roskilde";
       break;
-
-    case "/workers/:id":
-      title = "Kontakt en medarbejder";
+    case "/Login":
+      title = "Account Login";
       break;
-
-
+    case "/makeuser":
+      title = "Opret Bruger";
+      break;
     default:
       title = "Velkommen til Din Mægler";
   }
 
-return (
+  
+  const breadcrumbName = title;
+  
+  return (
     <section className="pagesBg-container">
-      <h1 className="pagesBg-header">{title}</h1>
+      <div className="pagesBg-content">
+        <h1 className="pagesBg-header">{title}</h1>
+
+        <div className="breadcrumb">
+          <Link to="/">Home</Link>
+          <span>|</span>
+          <span className="breadcrumcName">{breadcrumbName}</span>
+        </div>
+      </div>
     </section>
   );
-}export default PagesBg;
+}
+
+export default PagesBg;

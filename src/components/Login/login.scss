@@ -1,0 +1,47 @@
+.login-box {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form-box {
+    border: 1px solid #D3DEE8;
+    padding: 3rem 8rem;
+    box-shadow: #0074e11f 1px 2px 14px;
+    margin: 5rem 0 10rem 0;
+}
+
+.submit-login-btn {
+    background-color: #162A41;
+    color: white;
+
+    border: none;
+    padding: 1rem 10rem 1rem;
+    border-radius: 0.2rem;
+}
+
+.login-ways-btns {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    max-width: 22.7rem;
+    button {
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 0.1rem;
+
+        color: white;
+    }
+
+
+    .google-btn {
+        background-color: #DD4B39;
+    }
+
+    .facebook-btn {
+        background-color: #3B5999;
+    }
+
+    .twitter-btn {
+        background-color: #162A41;
+    }
+}
