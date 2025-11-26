@@ -15,7 +15,7 @@ function Prop() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [galleryOpen, setGalleryOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("pictures"); // pictures, layers, map, heart
+  const [activeTab, setActiveTab] = useState("pictures");
 
   const API_URL = `https://dinmaegler.onrender.com/homes/${id}`;
 
@@ -47,7 +47,7 @@ function Prop() {
   if (error) return <p>Error: {error}</p>;
   if (!property) return <p>No property found.</p>;
 
-  // Render gallery content based on active tab
+
   const renderGalleryContent = () => {
     switch (activeTab) {
       case "pictures":
@@ -70,16 +70,30 @@ function Prop() {
             </div>
           </div>
         );
-      case "map":
+      case "map": {
+        // build a readable address from available fields
+        const address = [
+          property.adress1,
+          property.adress2,
+          property.postalcode ? `${property.postalcode} ${property.city ?? ""}` : property.city
+        ].filter(Boolean).join(", ");
+
+        const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
+
         return (
-          <div className="gallery-content">
+          <div className="gallery-content gallery-map">
             <div className="gallery-grid">
-              {property.images?.[0] && (
-                <img src={property.adress1.url} alt="Map view" />
-              )}
+              <iframe
+                title="property-map"
+                className="gallery-map-iframe"
+                src={mapSrc}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         );
+      }
       default:
         return null;
     }
