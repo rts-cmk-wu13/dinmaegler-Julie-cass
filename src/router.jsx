@@ -2,6 +2,8 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Layout from "./Layout.jsx";
+import Login from "./pages/Login.jsx";
+import MakeUserPage from "./pages/MakeUser.jsx"
 import Home from "./pages/Home.jsx";
 import List from "./pages/PropList.jsx";
 import Detail from "./pages/PropDetails.jsx";
@@ -20,6 +22,14 @@ const Router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+       {
+        path: "Login",
+        element: <Login />,
+      },
+       {
+        path: "makeuser",
+        element: <MakeUserPage />,
       },
       {
         path: "workers",  // must be lowercase
