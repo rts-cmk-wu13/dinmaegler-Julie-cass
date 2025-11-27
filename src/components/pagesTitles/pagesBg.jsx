@@ -24,6 +24,10 @@ import { useLocation } from "react-router-dom";
       title = "Kontakt en medarbejder";
       break;
 
+    case "/Favorite":
+      title = "Mine favoritboliger";
+      break;
+
 
     default:
       title = "Velkommen til Din Mægler";

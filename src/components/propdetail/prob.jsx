@@ -172,10 +172,10 @@ function Prop() {
 
         <div className="lastdescription">
             <section className="property-description">
-                <h2>Beskrivelse:</h2> <p>{property.description}</p>
+                <h3>Beskrivelse:</h3> <p>{property.description}</p>
             </section>
             <section>
-              <h2><strong>Ansvalig mægler</strong></h2>
+              <h3><strong>Ansvalig mægler</strong></h3>
                 {(() => {
                   const agentId =
                     property.agent?.id ||

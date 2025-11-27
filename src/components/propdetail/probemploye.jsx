@@ -18,28 +18,28 @@ function BuildInfoCard({ agentId }) {
   if (!worker) return <p>No worker found.</p>;
 
   return (
-    <section className="detailP_worker_box">
-      <div className="D_information_box" key={worker.id}>
-        <div className="D_worker_info_box">
+    <section className="detailP_worker_box2">
+      <div className="D_information_box2" key={worker.id}>
+        <div className="D_worker_info_box2">
             
-          <div className="D_worker_image">
-            <img className="worker-image" src={worker.image?.url} alt={worker.name} />
-            <div className="D_action_links">
+          <div className="D_worker_image2">
+            <img className="worker-image2" src={worker.image?.url} alt={worker.name} />
+            <div className="D_action_links2">
               <FaInstagram />
               <FaLinkedinIn />
               <FaSkype />
             </div>
           </div>
 
-          <div className="D_worker_text_info">
-              <p className="name">{worker.name}</p>
-            <p className="title">{worker.title}</p>
-            <hr className="shortking"/>
-            <p className="phone">
+          <div className="D_worker_text_info2">
+              <p className="name2">{worker.name}</p>
+            <p className="title2">{worker.title}</p>
+            <hr className="shortking2"/>
+            <p className="phone2">
               <FaPhoneAlt />
               {worker.phone}
             </p>
-            <p className="email">
+            <p className="email2">
               <SiMinutemailer />
               {worker.email}
             </p>
