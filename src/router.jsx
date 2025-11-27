@@ -8,6 +8,7 @@ import Home from "./pages/Home.jsx";
 import List from "./pages/PropList.jsx";
 import Detail from "./pages/PropDetails.jsx";
 import Workers from "./pages/Workers.jsx";
+import Favorite from "./pages/Favorite.jsx";
 
 import Worker from "./pages/worker.jsx";
 
@@ -45,9 +46,14 @@ const Router = createBrowserRouter([
       {
         path: "workers/:id", // worker detail
         element: <Worker />,
-      },{
+      },
+      {
         path: "Contact",
         element: <Contact />,
+      },
+      {
+        path: "favorite",
+        element: <Favorite />,
       },
     ],
   },
