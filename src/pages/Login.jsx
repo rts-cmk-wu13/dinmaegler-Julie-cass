@@ -8,7 +8,6 @@ function Login(){
     return(
         <>
         <PagesBg/>
-
 <LogIn/>
         </>
     )

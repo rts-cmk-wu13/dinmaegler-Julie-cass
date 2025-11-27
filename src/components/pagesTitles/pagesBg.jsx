@@ -35,12 +35,13 @@ function PagesBg() {
     <section className="pagesBg-container">
       <div className="pagesBg-content">
         <h1 className="pagesBg-header">{title}</h1>
-
-        <div className="breadcrumb">
-          <Link to="/">Home</Link>
-          <span>|</span>
-          <span className="breadcrumcName">{breadcrumbName}</span>
-        </div>
+{(path === "/Login" || path === "/makeuser") && (
+          <div className="breadcrumb">
+            <Link to="/">Home</Link>
+            <span>|</span>
+            <span className="breadcrumcName">{breadcrumbName}</span>
+          </div>
+        )}
       </div>
     </section>
   );
