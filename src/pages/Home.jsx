@@ -1,6 +1,6 @@
 import React from "react";
 
-import Search from "../components/search/search.jsx";
+import Search from "../components/Homesearch/search.jsx";
 import Danes from "../components/danes/danes";
 import Chosen from "../components/chosen/chosen.jsx";   
 import Newsletter from "../components/newsletter/Newsletter.jsx";   

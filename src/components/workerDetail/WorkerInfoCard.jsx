@@ -45,6 +45,8 @@ function WorkerInfoCard() {
              
             </div>
             <p className="title">{worker.title}</p>
+              <div className="workercard-underline"></div>
+
             <p className="phone"><FaPhoneAlt />{worker.phone}</p>
             <p className="email"><SiMinutemailer />{worker.email}</p>
           </div>
