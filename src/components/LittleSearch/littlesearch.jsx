@@ -10,4 +10,3 @@ function Littlesearch() {
 }
 export default Littlesearch;
 
-pik
