@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import "./buildings.scss";
 import { NavLink } from "react-router-dom";
 
-
-function Buildings() {
+function Buildings({ filters }) {
   const [properties, setProperties] = useState(null);
+  const [filteredProperties, setFilteredProperties] = useState(null);
   const [loading, setLoading] = useState(true);
   const API_URL = "https://dinmaegler.onrender.com/homes?";
 
@@ -27,6 +27,17 @@ function Buildings() {
       });
   }, []);
 
+  useEffect(() => {
+    if (properties) {
+      const filtered = properties.filter(property => {
+        const matchesCategory = !filters.category || property.type === filters.category;
+        const matchesPrice = property.price >= filters.minPrice && property.price <= filters.maxPrice;
+        return matchesCategory && matchesPrice;
+      });
+      setFilteredProperties(filtered);
+    }
+  }, [filters, properties]);
+
   if (loading) {
     return <p>Loading...</p>;
   }
@@ -34,28 +45,28 @@ function Buildings() {
   return (
     <section className="building-section">
       <div className="building-grid">
-        {properties && properties.map(property => (
-<NavLink to={`/properties/${property.id}`} key={property.id} className="building-card-link">
-          <div key={property.id} className="building-card">
-            <div className="building-image">
-              <img src={property.images[0].url} alt={property.type} />
-            </div>
-            <div className="building-info">
-              <h3>{property.adress1}</h3>
-              <p className="building-location">{property.postalcode} {property.city}</p>
-              <div className="building-type">
-                <span>{property.type}</span>
-                <span>• Ejerudgift: {property.cost} kr.</span>
+        {filteredProperties && filteredProperties.map(property => (
+          <NavLink to={`/properties/${property.id}`} key={property.id} className="building-card-link">
+            <div className="building-card">
+              <div className="building-image">
+                <img src={property.images[0].url} alt={property.type} />
               </div>
-            <hr />
-              <div className="building-price">
-                <span data-letter={property.energylabel} className="building-energy-label">{property.energylabel}</span>
-                <span className="building-rooms">{property.rooms} værelser • {property.livingArea} m²</span>
-                <span className="building-price">Kr. {property.price.toLocaleString()}</span>
+              <div className="building-info">
+                <h3>{property.adress1}</h3>
+                <p className="building-location">{property.postalcode} {property.city}</p>
+                <div className="building-type">
+                  <span>{property.type}</span>
+                  <span>• Ejerudgift: {property.cost} kr.</span>
+                </div>
+                <hr />
+                <div className="building-price">
+                  <span data-letter={property.energylabel} className="building-energy-label">{property.energylabel}</span>
+                  <span className="building-rooms">{property.rooms} værelser • {property.livingArea} m²</span>
+                  <span className="building-price">Kr. {property.price.toLocaleString()}</span>
+                </div>
               </div>
             </div>
-          </div>
-        </NavLink>
+          </NavLink>
         ))}
       </div>
     </section>

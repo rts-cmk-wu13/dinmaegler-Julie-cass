@@ -1,11 +1,11 @@
-.description_worker_box{
+.description_worker_box2{
     gap: 1rem;
     font-size: 1rem;
     line-height: 1.5rem;
     color: #444444;
 }
 
-.detailP_worker_box{
+.detailP_worker_box2{
     max-width: 35rem;
 
 padding: 1rem;
@@ -17,22 +17,22 @@ padding: 1rem;
 
 }
 
-.D_worker_info_box{
+.D_worker_info_box2{
     display: flex;
     gap: 2rem;
 }
 
-.D_worker_image {
+.D_worker_image2 {
     position: relative;
     display: grid;
     align-items: center;
     overflow: hidden;
     max-width: 380px;
+    width: 280px;
 }
 
-
-.D_worker_image img,
-.worker-image {
+.D_worker_image2 img,
+.worker-image2 {
   width: 100%;
   max-width: 380px;
   height: 260px;       
@@ -43,12 +43,12 @@ padding: 1rem;
 }
 
 
-.worker.image{
+.worker.image2{
     display: none;
 }
 
 
-.D_action_links {
+.D_action_links2 {
     position: absolute;
     bottom: 2.5rem;
     display: flex;
@@ -60,22 +60,22 @@ padding: 1rem;
     font-size: 1.2rem;
 }
 
-.D_worker_text_info{
+.D_worker_text_info2{
     margin-left: 1.5rem;
     display: grid;
     align-items: center;
 
-    .name{
+    .name2{
         font-size: 2rem;
         font-weight: 700;
     }
 
-    .title{
+    .title2{
         font-size: 1.2rem;
         color: #555555;
     }
 
-    .phone, .email{
+    .phone2, .email2{
         font-size: 1rem;
         color: #333333;
         display: flex;
@@ -83,8 +83,13 @@ padding: 1rem;
    
     }
 }
-.shortking{
+.shortking2{
     width: 3rem;
     border: 1px solid #bec4cb;
     margin: 0.5rem 0 1rem 0;
 }
+
+
+
+
+

@@ -14,7 +14,7 @@ function Navigation() {
                         isPending ? "pending" : isActive ? "active" : ""} to="/Workers">Mæglere</NavLink></li>
 
                     <li className="menu_item"><NavLink className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""} to="/">Mine favoritter</NavLink></li>
+                        isPending ? "pending" : isActive ? "active" : ""} to="/Favorite">Mine favoritter</NavLink></li>
 
                     <li className="menu_item"><NavLink className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""} to="/Contact">Kontakt os</NavLink></li>

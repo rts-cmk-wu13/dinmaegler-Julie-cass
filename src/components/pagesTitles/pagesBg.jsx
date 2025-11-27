@@ -24,6 +24,11 @@ function PagesBg() {
     case "/makeuser":
       title = "Opret Bruger";
       break;
+    case "/Favorite":
+      title = "Mine favoritboliger";
+      break;
+
+
     default:
       title = "Velkommen til Din Mægler";
   }
