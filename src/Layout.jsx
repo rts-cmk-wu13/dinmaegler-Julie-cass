@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+ import { Outlet } from "react-router-dom";
 import Menu from "./components/headerNavi/menu.jsx";
 import Footer from "./components/footer/footer.jsx";
 
@@ -18,3 +18,4 @@ function Layout() {
 }
 
 export default Layout;
+

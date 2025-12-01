@@ -1,6 +1,6 @@
 import React from 'react';
 import PagesBg from '../components/pagesTitles/pagesBg.jsx';
-import Littlesearch from '../components/search/littlesearch.jsx';
+import Littlesearch from '../components/LittleSearch/littlesearch.jsx';
 import Favoritecards from '../components/favorite/Favoritecards.jsx';
 
 function Favorite() {

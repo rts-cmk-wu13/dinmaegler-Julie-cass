@@ -1,0 +1,51 @@
+.error-section {
+    text-align: center;
+    margin: 0;
+    background-color: #EEF7FF;
+    padding-bottom: 8rem;
+
+    .top-error-box {
+
+        h1 {
+            -webkit-text-stroke: 1px #11263d;
+            position: relative;
+            font-size: 10rem;
+            font-weight: 700;
+            display: inline-block;
+            z-index: 1;
+            color: white;
+
+            margin-bottom: 0;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0.2em;
+                left: 0;
+                width: 100%;
+                height: 0.4em;
+                background: #11263d;
+                z-index: -1;
+            }
+        }
+    }
+
+.error-txt-box{
+    margin-bottom: 3rem;
+
+}
+
+    .errorBTN-home {
+        margin-top: 2rem;
+        max-width: 22.7rem;
+
+        text-decoration: none;
+
+        background-color: #11263d;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 0.1rem;
+
+        color: white;
+    }
+}
