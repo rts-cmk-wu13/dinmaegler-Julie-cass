@@ -9,7 +9,7 @@ function Favorite() {
             <PagesBg />
             <div>
                 <Littlesearch />
-                <hr />
+                <hr className='searchhr' />
                 <Favoritecards />
             </div>
         </>

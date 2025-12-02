@@ -35,7 +35,7 @@ function Chosen() {
   return (
     <section className="chosen-section">
       <div className="chosen-header">
-        <h2>Udvalgte Boliger</h2>
+        <h2 className='h22'>Udvalgte Boliger</h2>
         <p>There are many variations of passages of Lorem Ipsum available but the this in majority have suffered alteration in some</p>
       </div>
       

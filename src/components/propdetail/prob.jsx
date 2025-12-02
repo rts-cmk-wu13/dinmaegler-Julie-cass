@@ -6,7 +6,7 @@ import BuildInfoCard from "./probemploye";
 import { AiOutlinePicture } from "react-icons/ai";
 import { IoLayersOutline } from "react-icons/io5";
 import { FiMapPin } from "react-icons/fi";
-import { FaRegHeart } from "react-icons/fa";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 function Prop() {
   const { id } = useParams();
@@ -16,6 +16,37 @@ function Prop() {
   const [error, setError] = useState(null);
   const [galleryOpen, setGalleryOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("pictures");
+
+  // favorites state synced with localStorage (store ids as strings)
+  const [favorites, setFavorites] = useState([]);
+
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem("favorites");
+      if (stored) setFavorites(JSON.parse(stored));
+    } catch (err) {
+      console.error("Failed to load favorites from localStorage", err);
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+    } catch (err) {
+      console.error("Failed to save favorites to localStorage", err);
+    }
+  }, [favorites]);
+
+  const isFavorited = (propId) => favorites.includes(String(propId));
+
+  const toggleFavorite = (e, propId) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const idStr = String(propId);
+    setFavorites(prev =>
+      prev.includes(idStr) ? prev.filter(f => f !== idStr) : [...prev, idStr]
+    );
+  };
 
   const API_URL = `https://dinmaegler.onrender.com/homes/${id}`;
 
@@ -42,11 +73,9 @@ function Prop() {
       });
   }, [id]);
 
-  
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
   if (!property) return <p>No property found.</p>;
-
 
   const renderGalleryContent = () => {
     switch (activeTab) {
@@ -116,7 +145,14 @@ function Prop() {
           <AiOutlinePicture className="picicon_img" onClick={() => { setActiveTab("pictures"); setGalleryOpen(true); }}/>
           <IoLayersOutline className="picicon_layers" onClick={() => { setActiveTab("layers"); setGalleryOpen(true); }}/>
           <FiMapPin className="picicon_pin" onClick={() => { setActiveTab("map"); setGalleryOpen(true); }}/>
-          <FaRegHeart className="picicon_heart"/>
+          <button
+            className="prop-fav-btn"
+            onClick={(e) => toggleFavorite(e, property.id)}
+            aria-pressed={isFavorited(property.id)}
+            title={isFavorited(property.id) ? "Fjern fra favoritter" : "Tilføj til favoritter"}
+          >
+            {isFavorited(property.id) ? <FaHeart /> : <FaRegHeart />}
+          </button>
         </section>
         <h2>Kr. {fmt(property.price)}</h2>
         </div>
