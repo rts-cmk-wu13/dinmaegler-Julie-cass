@@ -30,11 +30,11 @@ if(user){
         <>
             <section className="login-form-box">
                 <form id="LoginForm" action="login">
-                    <div className="field">
+                    <div className="Login-field">
                         <label for="Email">Email</label>
                         <input className="email-login-box" id="Email" type="email" placeholder="Email" required/>
                     </div>
-                    <div className="field">
+                    <div className="Login-field">
                         <label for="Password">Password</label>
                         <input className="password-login-box" id="Password" type="password" placeholder="Password" required/>
                     </div>

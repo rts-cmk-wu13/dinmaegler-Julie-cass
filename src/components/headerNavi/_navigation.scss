@@ -1,25 +1,25 @@
 .header-menu {
     display: flex;
-    justify-content: space-around; /* Space out logo and menu items */
-    align-items: center; /* Align items vertically */
+    justify-content: space-around; 
+    align-items: center; 
     padding: 0.9rem;
 
     .menu {
         display: flex;
-        gap: 1rem; /* Add spacing between menu items */
-        list-style: none; /* Remove bullet points */
-        margin: 0; /* Remove default margin */
-        padding: 0; /* Remove default padding */
+        gap: 1rem;
+        list-style: none; 
+        margin: 0; 
+        padding: 0; 
 
         .menu_item {
             padding: 0.3rem 0.8rem;
-            text-transform: uppercase; /* Make text uppercase */
-            font-size: 0.8rem; /* Adjust font size */
+            text-transform: uppercase; 
+            font-size: 0.8rem; 
             font-weight: 500;
 
             a {
-                text-decoration: none; /* Remove underline from links */
-                color: inherit; /* Inherit text color from parent */
+                text-decoration: none; 
+                color: inherit; 
             }
         }
     }

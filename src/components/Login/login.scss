@@ -8,6 +8,18 @@
     padding: 3rem 8rem;
     box-shadow: #0074e11f 1px 2px 14px;
     margin: 5rem 0 10rem 0;
+
+    .Login-field{
+       display: flex;
+        flex-direction: column;
+        margin-bottom: 1.3rem;
+        flex: 1;
+        
+        input{
+            margin-top: 0.5rem;
+           height: 2rem;
+        }
+    }
 }
 
 .submit-login-btn {
