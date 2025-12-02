@@ -17,7 +17,18 @@
             text-decoration: none;
             list-style: none;
             color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            ;
         }
+        .SiMinut{
+            font-size: 20px;
+        }
+        .SiMinutkite{
+            font-size: 25px;
+        }
+
         div {
             display: flex;
             gap: 1rem; 

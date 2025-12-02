@@ -13,11 +13,11 @@ function MenuTop() {
        <nav className="top_menu">
         <ul className="top">
             <div>
-            <li className="top_item"><SiMinutemailer/>4000@dinmaegler.com</li>
-            <li className="top_item"><FaPhoneAlt/>+45 7070 4000</li>
+            <li className="top_item"><SiMinutemailer className="SiMinutkite"/> 4000@dinmaegler.com</li>
+            <li className="top_item"><FaPhoneAlt className="SiMinut"/> +45 7070 4000</li>
             </div>
             <div>
-            <NavLink to="/Login"><li className="top_item"><BsPersonFill/>Lod ind</li></NavLink>
+            <NavLink to="/Login"><li className="top_item"><BsPersonFill className="SiMinut"/> Lod ing</li></NavLink>
             </div>
         </ul>
        </nav>
