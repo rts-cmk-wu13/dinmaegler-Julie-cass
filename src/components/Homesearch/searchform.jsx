@@ -10,7 +10,7 @@ function SearchForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Search..." value={query} onChange={(e) => setQuery(e.target.value)}/>
+      <input type="search" placeholder="Search..." value={query} onChange={(e) => setQuery(e.target.value)}/>
       <button type="submit" >
         Search
       </button>

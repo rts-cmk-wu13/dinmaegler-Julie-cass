@@ -1,25 +1,25 @@
 @use "./Desc.scss";
 
-.leftSide{
+.leftSide {
     max-width: 43rem;
 
-padding: 2rem;
+    padding: 2rem;
 
     border: 1px solid #D3DEE8;
     border-radius: 0.5rem;
 
 
-     margin-right: 1.5rem;
+    margin-right: 1.5rem;
 
-    img{
-        
-        
+    img {
+
+
         max-width: 17.5rem;
         max-height: auto;
     }
 }
 
-.D_worker_info_box{
+.D_worker_info_box {
     display: flex;
     gap: 2rem;
 }
@@ -34,6 +34,11 @@ padding: 2rem;
     }
 }
 
+.workercard-underline {
+    width: 3rem;
+    border: 1px solid #bec4cb;
+    margin: 0.5rem 0 1rem 0;
+}
 
 .D_action_links {
     position: absolute;
@@ -47,39 +52,46 @@ padding: 2rem;
     font-size: 1.2rem;
 }
 
-.D_worker_text_info{
-margin-left: 1.5rem;
+.D_worker_text_info {
+    margin-left: 1.5rem;
 
-.name_heart {
-  display: flex;
-  align-items: center;
-  gap: 3.5rem;
-}
-
-.heart-icon {
-  font-size: 1.3rem;     
-  color: #162A41;  
-  background-color: #D3DEE8;
-  border-radius: 2rem;
-  padding: 0.5rem;
-  cursor: pointer;
-
-}
-    .name{
-        font-size: 2rem;
-        font-weight: 700;
+    .name_heart {
+        display: flex;
+        align-items: center;
+        gap: 3.5rem;
+        .heart-icon {
+            font-size: 1.3rem;
+            color: #162A41;
+            background-color: #D3DEE8;
+            border-radius: 2rem;
+            padding: 0.5rem;
+            cursor: pointer;
+    
+        }
+        
+            .name {
+                font-size: 2rem;
+                font-weight: 700;
+                margin-bottom: 0;
+            }
     }
 
-    .title{
+
+    .title {
         font-size: 1.2rem;
         color: #555555;
+
+        margin-top: 0;
+        
+
     }
 
-    .phone, .email{
+    .phone,
+    .email {
         font-size: 1rem;
         color: #333333;
         display: flex;
         align-items: center;
-   
+
     }
 }

@@ -14,6 +14,8 @@
     margin-bottom: 1.5rem;
 }
 
+
+//input boxes sizing
 .Contact-name-box {
 
     width: 16.3rem;
@@ -23,48 +25,6 @@
 
     width: 16.3rem;
 
-}
-
-.Contact-form-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-
-}
-
-
-.Contact-contact-form .row {
-    display: flex;
-    gap: 1.3rem;
-}
-
-.Contact-field {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.3rem;
-    flex: 1;
-}
-
-.Contact-field label {
-    margin-bottom: 0.6rem;
-}
-
-.Contact-field input,
-.Contact-field textarea {
-    padding: 12px 14px;
-    border: 0.1rem solid #d1d5db;
-    border-radius: 4px;
-    font-size: 15px;
-}
-
-.Contact-submit-btn {
-    padding: 0.8rem 1.4rem;
-
-    background: #0b1f36;
-    color: white;
-    border: none;
-    border-radius: 0.1rem;
-    font-size: 1rem;
-    cursor: pointer;
 }
 
 .Contact-topic-box {
@@ -80,4 +40,50 @@
   overflow: auto; 
 
 }
+//end of box sizes
+
+
+.Contact-form-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}
+
+
+.row {
+    display: flex;
+    gap: 1.3rem;
+}
+
+.Contact-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.3rem;
+    flex: 1;
+    label {
+        margin-bottom: 0.6rem;
+    }
+    
+    input,
+    textarea {
+        padding: 12px 14px;
+        border: 0.1rem solid #d1d5db;
+        border-radius: 4px;
+        font-size: 15px;
+    }
+}
+
+
+.Contact-submit-btn {
+    padding: 0.8rem 1.4rem;
+
+    background: #0b1f36;
+    color: white;
+    border: none;
+    border-radius: 0.1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
 

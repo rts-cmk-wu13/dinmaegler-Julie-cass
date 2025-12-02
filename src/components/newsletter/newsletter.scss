@@ -23,11 +23,11 @@
   
 
     .newsletter-content {
-max-width: 69rem;
+      //max width 69rem
 width: 100%;
         display: flex;
         justify-content: center;
-margin-left: 7rem;
+        //margin left 7rem
       position: relative;
       z-index: 2;
       color: #fff;
@@ -47,7 +47,7 @@ text-align: center;
     padding: 0 10px;
     width: 350px;
     height: 50px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px #0000001a;
   }
   
   .email-input {

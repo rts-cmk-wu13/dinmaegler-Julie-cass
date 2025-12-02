@@ -18,7 +18,7 @@ function PropSearch() {
 
   <form className="searchbar-form" onSubmit={handleSubmit}>
     <FaSearch className="search-icon" aria-hidden="true" />
-    <input type="text" placeholder="Search..." value={query} onChange={(e) => setQuery(e.target.value)}  aria-label="Search"/>
+    <input type="search" placeholder="Search..." value={query} onChange={(e) => setQuery(e.target.value)}  aria-label="Search"/>
   </form>
   
    </div>

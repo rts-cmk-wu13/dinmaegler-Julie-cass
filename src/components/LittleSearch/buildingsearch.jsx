@@ -39,7 +39,7 @@ function Buildingsearch({ onFiltersChange }) {
 
   return (
     <>
-      <h2 className="building-search-h2">Søg efter dit drømmehus</h2>
+      <h2>Søg efter dit drømmehus</h2>
       <div className="building-search" ref={rootRef}>
         <div className="filter filter--category">
           <label className="filter__label">Ejendomstype</label>

@@ -3,14 +3,14 @@
     padding: 0.5rem;
 
     .top_menu {
-        max-width: 1000px; /* Adjust width for alignment */
-        margin: 0 auto; /* Center the menu */
+        max-width: 1000px; 
+        margin: 0 auto; 
         .top {
             display: flex;
             justify-content: space-between;
-            align-items: center; /* Align items vertically */
+            align-items: center; 
             color: white;
-            font-size: 0.9rem; /* Adjust font size */
+            font-size: 0.9rem;
         }
 
         .top_item{
@@ -20,7 +20,7 @@
         }
         div {
             display: flex;
-            gap: 1rem; /* Add spacing between items */
+            gap: 1rem; 
         }
     }
 }

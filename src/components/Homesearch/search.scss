@@ -3,11 +3,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 60vh; /* make the background bigger */
+
+    min-height: 60vh;
+
+
     display: flex;
     flex-direction: column;
-    justify-content: center; /* centers vertically */
-    align-items: center; /* centers horizontally */
+    justify-content: center; 
+    align-items: center;
     padding: 2rem;
   
     h1 {
@@ -30,27 +33,22 @@
             width: 85%;
             height: 3rem;
             border: 1px solid #ccc;
-            border-radius: 2px;
-            font-size: 16px;
-            padding: 0 10px;
+            border-radius: 0.2rem;
+            font-size: 1rem;
+            padding: 0 0.8rem;
         }
+
         button{
             width: 10%;
             height: 3rem;
             margin-left: 1rem;
             background-color: #162A41;
+             color: white;
+            border: none;
         }
        }
- 
- }
-h1{
-    font-weight: bold;
-    text-align: center;
-    font-size: 3rem;
-}
- button, h1{
-    color: white;
- }
+
+    }
 }
  
   
