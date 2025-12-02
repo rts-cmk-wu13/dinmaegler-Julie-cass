@@ -142,9 +142,9 @@ function Prop() {
         <div className="propertyinnerdetails">
         <h2>{property.adress1} <br /> {property.postalcode} {property.city}</h2>
         <section className="icons">
-          <AiOutlinePicture className="picicon_img" onClick={() => { setActiveTab("pictures"); setGalleryOpen(true); }}/>
-          <IoLayersOutline className="picicon_layers" onClick={() => { setActiveTab("layers"); setGalleryOpen(true); }}/>
-          <FiMapPin className="picicon_pin" onClick={() => { setActiveTab("map"); setGalleryOpen(true); }}/>
+          <button className="piciconbtn"><AiOutlinePicture className="picicon_img" onClick={() => { setActiveTab("pictures"); setGalleryOpen(true); }}/></button>
+          <button className="piciconbtn"><IoLayersOutline className="picicon_layers" onClick={() => { setActiveTab("layers"); setGalleryOpen(true); }}/></button>
+          <button className="piciconbtn"><FiMapPin className="picicon_pin" onClick={() => { setActiveTab("map"); setGalleryOpen(true); }}/></button>
           <button
             className="prop-fav-btn"
             onClick={(e) => toggleFavorite(e, property.id)}

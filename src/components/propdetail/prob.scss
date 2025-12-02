@@ -52,11 +52,30 @@
 .picicon_img,.picicon_layers{
     font-size: 48px;
     color: #8f8f8f;
+    
 }
-.picicon_pin,.picicon_heart{
+.picicon_pin{
     font-size: 40px;
     color: #8f8f8f;
 }
+.prop-fav-btn{
+    font-size: 40px;
+    color: #8f8f8f;
+    background-color: #fff;
+    border: none;
+}
+.piciconbtn{
+    background-color: #fff;
+    border: none;
+}
+.prop-fav-btn:hover,
+.piciconbtn:hover .picicon_img,
+.piciconbtn:hover .picicon_layers,
+.piciconbtn:hover .picicon_pin{
+    color: #53575b;
+    cursor: pointer;
+}
+
 .property-description {
   line-height: 2.2;
   width: 90%;

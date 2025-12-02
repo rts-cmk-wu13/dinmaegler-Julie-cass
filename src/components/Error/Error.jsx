@@ -10,7 +10,7 @@ function Error() {
             <section className="error-section">
 
                 <div className="top-error-box">
-                    <h1>Hov!</h1>
+                    <h1 className="hovsa">Hov!</h1>
                 </div>
 
                 <div className="error-txt-box">
