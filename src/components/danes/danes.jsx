@@ -2,17 +2,15 @@ import React from 'react';
 import DanesImage from '../../assets/Image.png';
 import './danes.scss';
 
-
-
 function Danes() {
+  // Presentational component: image + stats + features
   return (
-    <>
     <section className="danes-section">
       <div className="danes-container">
         <div className="danes-content">
           <div className="danes-header">
-
             <div className="danes-text">
+              {/* headings & descriptive text */}
               <h2 className='danesh2'>Vi har fulgt danskerne hjem i snart 4 årtier</h2>
               <p>Det syntes vi siger noget om os!</p>
               <p>
@@ -22,10 +20,13 @@ function Danes() {
               </p>
             </div>
 
+            {/* illustrative image */}
             <div className="danes-image">
               <img src={DanesImage} alt="Family with house frame" />
             </div>
           </div>
+
+          {/* stats block */}
           <div className="danes-stats">
             <div className="stat-item">
               <h3>38+</h3>
@@ -41,6 +42,7 @@ function Danes() {
             </div>
           </div>
 
+          {/* feature cards */}
           <div className="danes-features">
             <div className="feature">
               <h4>Bestil et salgstjek</h4>
@@ -58,7 +60,6 @@ function Danes() {
         </div>
       </div>
     </section>
-    </>
   );
 };
 

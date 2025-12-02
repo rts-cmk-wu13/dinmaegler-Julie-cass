@@ -4,13 +4,17 @@ import { NavLink } from "react-router-dom";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 function Buildings({ filters }) {
+  // properties: raw API data
   const [properties, setProperties] = useState(null);
+  // filteredProperties: properties after applying filters prop
   const [filteredProperties, setFilteredProperties] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  // favorites stored locally here (kept as strings)
   const [favorites, setFavorites] = useState([]);
   const API_URL = "https://dinmaegler.onrender.com/homes?";
 
-  // load favorites from localStorage on mount
+  // Load favorites from localStorage once (on mount)
   useEffect(() => {
     try {
       const stored = localStorage.getItem("favorites");
@@ -20,7 +24,7 @@ function Buildings({ filters }) {
     }
   }, []);
 
-  // persist favorites to localStorage whenever it changes
+  // Persist favorites whenever they change
   useEffect(() => {
     try {
       localStorage.setItem("favorites", JSON.stringify(favorites));
@@ -29,6 +33,7 @@ function Buildings({ filters }) {
     }
   }, [favorites]);
 
+  // Fetch all properties on mount
   useEffect(() => {
     fetch(API_URL)
       .then(response => {
@@ -38,7 +43,7 @@ function Buildings({ filters }) {
         return response.json();
       })
       .then(data => {
-        console.log("Data fetched:", data);
+        // store raw data and mark loading false
         setProperties(data);
         setLoading(false);
       })
@@ -48,6 +53,7 @@ function Buildings({ filters }) {
       });
   }, []);
 
+  // Apply filters (category + min/max price) whenever filters or properties change
   useEffect(() => {
     if (properties) {
       const filtered = properties.filter(property => {
@@ -59,6 +65,7 @@ function Buildings({ filters }) {
     }
   }, [filters, properties]);
 
+  // Toggle favorite: add/remove id as string
   const toggleFavorite = (e, propertyId) => {
     // prevent NavLink navigation
     e.preventDefault();
@@ -77,17 +84,20 @@ function Buildings({ filters }) {
     <section className="building-section">
       <div className="building-grid">
         {filteredProperties && filteredProperties.map(property => {
+          // convert id to string to compare with favorites store
           const idStr = String(property.id);
           const isFav = favorites.includes(idStr);
 
           return (
             <NavLink to={`/properties/${property.id}`} key={property.id} className="building-card-link">
               <div className="building-card">
+                {/* Image + heart button */}
                 <div className="building-image">
-                  <img src={property.images[0].url} alt={property.type} />
+                  {/* NOTE: guard property.images in case API returns empty array */}
+                  <img src={property.images?.[0]?.url} alt={property.type} />
                   <button
                     className="favorite-btn2"
-                    onClick={(e) => toggleFavorite(e, property.id)}
+                    onClick={(e) => toggleFavorite(e, property.id)} // toggles favorite
                     aria-label={isFav ? "Fjern fra favoritter" : "Tilføj til favoritter"}
                     aria-pressed={isFav}
                     title={isFav ? "Fjern fra favoritter" : "Tilføj til favoritter"}
@@ -95,6 +105,8 @@ function Buildings({ filters }) {
                     {isFav ? <FaHeart /> : <FaRegHeart />}
                   </button>
                 </div>
+
+                {/* Info section shown after the image */}
                 <div className="building-info">
                   <h3>{property.adress1}</h3>
                   <p className="building-location">{property.postalcode} {property.city}</p>
