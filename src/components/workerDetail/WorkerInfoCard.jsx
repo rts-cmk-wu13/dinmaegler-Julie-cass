@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 import { SiMinutemailer } from "react-icons/si";
 import { FaInstagram } from "react-icons/fa6";
-import { FaLinkedinIn, FaSkype, FaPhoneAlt, FaRegHeart,  FaHeart  } from "react-icons/fa";
+import { FaLinkedinIn, FaSkype, FaPhoneAlt, FaRegHeart, FaHeart } from "react-icons/fa";
 
 
 import "./detailworker-scss/Carddetail.scss";
@@ -27,6 +27,7 @@ function WorkerInfoCard() {
 
           <div className="D_worker_image">
             <img src={worker.image?.url} alt={worker.name} />
+            
             <div className="D_action_links">
               <FaInstagram />
               <FaLinkedinIn />
@@ -38,14 +39,14 @@ function WorkerInfoCard() {
             <div className="name_heart">
               <p className="name">{worker.name}</p>
               {liked ? (
-    <FaHeart className="heart-icon liked" onClick={() => setLiked(false)} />
-  ) : (
-    <FaRegHeart className="heart-icon" onClick={() => setLiked(true)} />
-  )}
-             
+                <FaHeart className="heart-icon liked" onClick={() => setLiked(false)} />
+              ) : (
+                <FaRegHeart className="heart-icon" onClick={() => setLiked(true)} />
+              )}
+
             </div>
             <p className="title">{worker.title}</p>
-              <div className="workercard-underline"></div>
+            <div className="workercard-underline"></div>
 
             <p className="phone"><FaPhoneAlt />{worker.phone}</p>
             <p className="email"><SiMinutemailer />{worker.email}</p>
