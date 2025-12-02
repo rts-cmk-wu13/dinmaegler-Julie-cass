@@ -17,7 +17,7 @@ function MenuTop() {
             <li className="top_item"><FaPhoneAlt className="SiMinut"/> +45 7070 4000</li>
             </div>
             <div>
-            <NavLink to="/Login"><li className="top_item"><BsPersonFill className="SiMinut"/> Lod ind</li></NavLink>
+            <NavLink to="/Login"><li className="top_item"><BsPersonFill className="SiMinut"/> Lod ing</li></NavLink>
             </div>
         </ul>
        </nav>
