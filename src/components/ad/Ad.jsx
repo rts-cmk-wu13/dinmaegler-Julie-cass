@@ -24,13 +24,13 @@ function Ad() {
             </div>
             <div className="btn-box">
               <NavLink to="/">
-                <button className="Ad-button google">
+                <button className="Ad-button google" onClick={() => window.scrollTo(0, 0)}>
                   <PiGooglePlayLogoFill /> Google Play
                 </button>
               </NavLink>
 
               <NavLink to="/">
-                <button className="Ad-button apple">
+                <button className="Ad-button apple" onClick={() => window.scrollTo(0, 0)}>
                   <FaApple /> Apple Store
                 </button>
               </NavLink>
