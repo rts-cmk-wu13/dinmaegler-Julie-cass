@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 function MakeUserForm() {
-/*   const [name, setName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
- const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,53 +20,97 @@ function MakeUserForm() {
     }
 
     if (password !== confirmPassword) {
-      setError("Passwords do not match.");
+      setError("Passwords matcher ikke.");
       return;
     }
 
+    // Get existing users
     const users = JSON.parse(localStorage.getItem("users") || "[]");
-    users.push({ id: Date.now(), name, email, password });
+
+    // Check if email already exists
+    const userExists = users.some((user) => user.email === email);
+    if (userExists) {
+      setError("Email er allerede i brug.");
+      return;
+    }
+
+    // Add new user
+    users.push({
+      id: Date.now(),
+      name,
+      email,
+      password,
+    });
+
     localStorage.setItem("users", JSON.stringify(users));
 
-        setTimeout(() => {
-      navigate("/Login");
-    }, 1000);
-  
- 
+    alert("Bruger oprettet succesfuldt!");
+
+    // Clear form
     setName("");
     setEmail("");
     setPassword("");
     setConfirmPassword("");
-    alert("Bruger oprettet succesfuldt!");
-    // optionally navigate to login page: window.location.href = "/login";
-  }; */
+
+    // Redirect to login
+    navigate("/Login");
+  };
 
   return (
-    <>
-     <div className="makeuser-form">
-            <form id="MakeuserForm" action="">
-                <div className="fieldMU">
-                    <label>Fulde navm</label>
-                    <input className="makeuser-email-box" id="name" type="name" placeholder="Fulde navn" />
-                </div>
+    <div className="makeuser-form">
+      <form id="MakeuserForm" onSubmit={handleSubmit}>
+        {error && <p style={{ color: "red" }}>{error}</p>}
 
-                <div className="fieldMU">
-                    <label>Email adresse</label>
-                    <input className="makeuser-email-box" id="ComfirmEmail" type="email" placeholder="Email adresse" />
-                </div>
-                <div className="fieldMU">
-                    <label>Password</label>
-                    <input className="makeuser-password-box" id="Password" type="password" placeholder="Password" />
+        <div className="fieldMU">
+          <label>Fulde navn</label>
+          <input
+            className="makeuser-email-box"
+            type="text"
+            placeholder="Fulde navn"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
 
-                </div>
-                <div className="fieldMU">
-                    <label>Bekrøft password</label>
-                    <input className="makeuser-password-box" id="ComfirmPassword" type="password" placeholder="Password" />
-                </div>
-                <button type="submit" className="submit-makeuser-btn">Opret bruger</button>
-            </form>
-            </div>
-    </>
+        <div className="fieldMU">
+          <label>Email adresse</label>
+          <input
+            className="makeuser-email-box"
+            type="email"
+            placeholder="Email adresse"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+
+        <div className="fieldMU">
+          <label>Password</label>
+          <input
+            className="makeuser-password-box"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+
+        <div className="fieldMU">
+          <label>Bekræft password</label>
+          <input
+            className="makeuser-password-box"
+            type="password"
+            placeholder="Bekræft password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+        </div>
+
+        <button type="submit" className="submit-makeuser-btn">
+          Opret bruger
+        </button>
+      </form>
+    </div>
   );
-} export default MakeUserForm
+}
 
+export default MakeUserForm;
