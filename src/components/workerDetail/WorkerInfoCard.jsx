@@ -17,10 +17,7 @@ function WorkerInfoCard() {
 
   if (loading) return <p>Loading...</p>;
   if (!worker) return <p>No worker found.</p>;
-
   
-
-
   return (
     <section className="detailP_worker_box">
       <div className="D_information_box" key={worker.id}>
@@ -28,7 +25,7 @@ function WorkerInfoCard() {
 
           <div className="D_worker_image">
             <img src={worker.image?.url} alt={worker.name} />
-            
+
             <div className="D_action_links">
               <FaInstagram />
               <FaLinkedinIn />
