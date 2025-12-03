@@ -18,6 +18,7 @@ function WorkerInfoCard() {
   if (loading) return <p>Loading...</p>;
   if (!worker) return <p>No worker found.</p>;
 
+  
 
 
   return (
