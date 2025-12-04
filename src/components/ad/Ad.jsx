@@ -23,14 +23,18 @@ function Ad() {
                 Her kan du også se statistik på interessen for din bolig i alle vores salgskanaler.</p>
             </div>
             <div className="btn-box">
-              <NavLink to="/">
-                <button className="Ad-button google">
-                  <PiGooglePlayLogoFill /> Google Play
+                
+
+
+              <NavLink to="/piss"  onClick={() => window.scrollTo(0, 0)}>
+                <button className="Ad-button apple">
+  <PiGooglePlayLogoFill /> Google Play
                 </button>
               </NavLink>
 
-              <NavLink to="/">
+              <NavLink to="/poop"  onClick={() => window.scrollTo(0, 0)}>
                 <button className="Ad-button apple">
+
                   <FaApple /> Apple Store
                 </button>
               </NavLink>
