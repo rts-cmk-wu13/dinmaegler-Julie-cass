@@ -10,17 +10,16 @@ import Employees from "../components/workers/emoployes.jsx";
 import Ad from "../components/ad/Ad.jsx";
 function Home() {
     return(
-        <>
+    <>
 
-<Search />
-<Danes />
-<Chosen />
-<Newsletter />
-<Employees />
+    <Search />
+    <Danes />
+    <Chosen />
+    <Newsletter />
+    <Employees />
+    <Ad/>
 
-<Ad/>
-        </>
-
+    </>
     )
 }
 export default Home;

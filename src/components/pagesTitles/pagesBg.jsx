@@ -6,7 +6,7 @@ function PagesBg() {
   const location = useLocation();
   const path = location.pathname;
 
-  // Title logic
+  // compute title based on current pathname
   let title = "";
   switch (path) {
     case "/Contact":
@@ -27,20 +27,19 @@ function PagesBg() {
     case "/Favorite":
       title = "Mine favoritboliger";
       break;
-
-
     default:
       title = "Velkommen til Din Mægler";
   }
 
-  
   const breadcrumbName = title;
-  
+
   return (
     <section className="pagesBg-container">
       <div className="pagesBg-content">
         <h1 className="pagesBg-header">{title}</h1>
-{(path === "/Login" || path === "/makeuser") && (
+
+        {/* show breadcrumb only on specific routes */}
+        {(path === "/Login" || path === "/makeuser") && (
           <div className="breadcrumb">
             <Link to="/">Home</Link>
             <span>|</span>
