@@ -11,14 +11,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <FavoritesProvider>
+      <AuthProvider>
       <RouterProvider router={Router} />
+      </AuthProvider>
     </FavoritesProvider>
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-<AuthProvider>
-    <RouterProvider router={Router} />
-    </AuthProvider>
   </React.StrictMode>
 );
