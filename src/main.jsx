@@ -2,10 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import Router from "./router.jsx";
+import { FavoritesProvider } from "./components/favorite/favoritehook";
 import "./app.css";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={Router} />
+    <FavoritesProvider>
+      <RouterProvider router={Router} />
+    </FavoritesProvider>
   </React.StrictMode>
 );

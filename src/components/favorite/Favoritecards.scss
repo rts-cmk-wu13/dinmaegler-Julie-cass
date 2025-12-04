@@ -108,3 +108,31 @@
     .fav-right { width: 100%; align-items: flex-start; }
     .fav-action-btn { width: 100%; }
     }
+
+    .energy-badge {
+        color: #ffffff;
+  
+    &[data-letter="A"] {
+      background: #40ba2dff;
+    }
+    &[data-letter="B"] {
+      background: #89ba2dff;
+    }
+    &[data-letter="C"] {
+      background: #bad234ff;
+    }
+    &[data-letter="D"] {
+      background: #ecec3fff;
+    }
+    &[data-letter="E"] {
+      background: #fffb47ff;
+    }
+    &[data-letter="F"] {
+      background: #ff7002ff;
+    }
+    &[data-letter="G"] {
+      background: #ff1702ff;
+    }
+
+    
+    }

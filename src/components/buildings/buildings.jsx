@@ -2,48 +2,30 @@ import React, { useState, useEffect } from 'react';
 import "./buildings.scss";
 import { NavLink } from "react-router-dom";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
+import { useFavorites } from "../favorite/favoritehook";
 
 function Buildings({ filters }) {
-  // properties: raw API data
+  // properties: all properties fetched from API
   const [properties, setProperties] = useState(null);
-  // filteredProperties: properties after applying filters prop
+  // filteredProperties: properties after applying category & price filters
   const [filteredProperties, setFilteredProperties] = useState(null);
   const [loading, setLoading] = useState(true);
-
-  // favorites stored locally here (kept as strings)
-  const [favorites, setFavorites] = useState([]);
+  
+  // Get shared favorites state and functions from hook
+  // All components using this hook share the same favorites state
+  const { favorites, toggleFavorite, isFavorited } = useFavorites();
+  
   const API_URL = "https://dinmaegler.onrender.com/homes?";
 
-  // Load favorites from localStorage once (on mount)
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem("favorites");
-      if (stored) setFavorites(JSON.parse(stored));
-    } catch (err) {
-      console.error("Failed to read favorites from localStorage", err);
-    }
-  }, []);
-
-  // Persist favorites whenever they change
-  useEffect(() => {
-    try {
-      localStorage.setItem("favorites", JSON.stringify(favorites));
-    } catch (err) {
-      console.error("Failed to write favorites to localStorage", err);
-    }
-  }, [favorites]);
-
-  // Fetch all properties on mount
+  // Fetch all properties on component mount
   useEffect(() => {
     fetch(API_URL)
       .then(response => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
+        if (!response.ok) throw new Error("Network response was not ok");
         return response.json();
       })
       .then(data => {
-        // store raw data and mark loading false
+        // Store raw property data
         setProperties(data);
         setLoading(false);
       })
@@ -57,56 +39,56 @@ function Buildings({ filters }) {
   useEffect(() => {
     if (properties) {
       const filtered = properties.filter(property => {
+        // Check if category matches (or no filter selected)
         const matchesCategory = !filters.category || property.type === filters.category;
+        // Check if price is within min/max range
         const matchesPrice = property.price >= filters.minPrice && property.price <= filters.maxPrice;
+        // Return true only if both conditions met
         return matchesCategory && matchesPrice;
       });
       setFilteredProperties(filtered);
     }
   }, [filters, properties]);
 
-  // Toggle favorite: add/remove id as string
-  const toggleFavorite = (e, propertyId) => {
-    // prevent NavLink navigation
+  // Handle favorite button click
+  const handleToggleFavorite = (e, propertyId) => {
+    // Prevent NavLink navigation when clicking heart button
     e.preventDefault();
     e.stopPropagation();
-    const id = String(propertyId);
-    setFavorites(prev =>
-      prev.includes(id) ? prev.filter(fid => fid !== id) : [...prev, id]
-    );
+    // Toggle favorite state (add or remove from favorites)
+    toggleFavorite(propertyId);
   };
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  if (loading) return <p>Loading...</p>;
 
   return (
     <section className="building-section">
       <div className="building-grid">
         {filteredProperties && filteredProperties.map(property => {
-          // convert id to string to compare with favorites store
+          // Convert id to string for consistency with favorites store
           const idStr = String(property.id);
-          const isFav = favorites.includes(idStr);
+          // Check if this property is in favorites
+          const isFav = isFavorited(idStr);
 
           return (
             <NavLink to={`/properties/${property.id}`} key={property.id} className="building-card-link">
               <div className="building-card">
-                {/* Image + heart button */}
+                {/* Image with heart button top-right */}
                 <div className="building-image">
-                  {/* NOTE: guard property.images in case API returns empty array */}
                   <img src={property.images?.[0]?.url} alt={property.type} />
                   <button
                     className="favorite-btn2"
-                    onClick={(e) => toggleFavorite(e, property.id)} // toggles favorite
+                    onClick={(e) => handleToggleFavorite(e, property.id)}
                     aria-label={isFav ? "Fjern fra favoritter" : "Tilføj til favoritter"}
                     aria-pressed={isFav}
                     title={isFav ? "Fjern fra favoritter" : "Tilføj til favoritter"}
                   >
+                    {/* Show filled heart if favorited, outline if not */}
                     {isFav ? <FaHeart /> : <FaRegHeart />}
                   </button>
                 </div>
 
-                {/* Info section shown after the image */}
+                {/* Property info shown after image */}
                 <div className="building-info">
                   <h3>{property.adress1}</h3>
                   <p className="building-location">{property.postalcode} {property.city}</p>
