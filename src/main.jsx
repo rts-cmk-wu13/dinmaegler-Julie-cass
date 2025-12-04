@@ -10,10 +10,10 @@ import "./app.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <FavoritesProvider>
-      <AuthProvider>
-      <RouterProvider router={Router} />
-      </AuthProvider>
-    </FavoritesProvider>
+  <AuthProvider>
+  <FavoritesProvider>
+    <RouterProvider router={Router} />
+  </FavoritesProvider>
+</AuthProvider>
   </React.StrictMode>
 );
