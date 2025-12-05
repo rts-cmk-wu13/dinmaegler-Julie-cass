@@ -1,6 +1,6 @@
 import React from 'react';
 import PagesBg from '../components/pagesTitles/pagesBg.jsx';
-import Littlesearch from '../components/LittleSearch/littlesearch.jsx';
+import Favesearch from '../components/LittleSearch/favesearch.jsx';
 import Favoritecards from '../components/favorite/Favoritecards.jsx';
 
 function Favorite() {
@@ -8,8 +8,6 @@ function Favorite() {
         <>
             <PagesBg />
             <div>
-                <Littlesearch />
-                <hr className='searchhr' />
                 <Favoritecards />
             </div>
         </>
