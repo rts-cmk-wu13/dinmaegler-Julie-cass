@@ -1,31 +1,32 @@
-import React from 'react';
-import { useState } from 'react';
-
+import React, { useState } from 'react';
 import "./littlesearch.scss";
 import { FaSearch } from "react-icons/fa";
 
-function Littlesearch() {
-  // small local search query state
+function Favesearch({ onSearch }) {
   const [query, setQuery] = useState("");
-    
-  // currently only logs the query — extend to call parent prop if needed
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Search submitted:", query);
+    onSearch(query);  // 🔥 send søgeteksten op til Favoritecards
   };
 
   return (
     <form className="searchbar-form2" onSubmit={handleSubmit}>
       <FaSearch className="search-icon2" aria-hidden="true" />
-      {/* input is controlled by query state */}
+
       <input
         type="search"
-        placeholder="Søg i favoritter"
+        placeholder="Søg i favoritter (fx villa, by, adresse...)"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={(e) => {
+          const value = e.target.value;
+          setQuery(value);
+          onSearch(value); // live filtering
+        }}
         aria-label="Search"
       />
     </form>
   );
 }
-export default Littlesearch;
+
+export default Favesearch;
