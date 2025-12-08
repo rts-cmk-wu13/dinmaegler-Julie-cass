@@ -9,7 +9,7 @@ import WorkerBox from "./WorkerBox.jsx";
 import WorkerFOrm from "./WorkerFOrm.jsx";
 
 
-function WorkerDetail() {
+function Workerdetail() {
 
   return (
     <section className="DetailWorker_p">
@@ -28,4 +28,4 @@ function WorkerDetail() {
   );
 }
 
-export default WorkerDetail;
+export default Workerdetail;
