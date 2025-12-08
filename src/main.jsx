@@ -5,7 +5,7 @@ import { AuthProvider } from "../src/context/AuthContext.jsx";
 import { RouterProvider } from "react-router-dom";
 import Router from "./router.jsx";
 import { FavoritesProvider } from "./components/favorite/favoritehook";
-import "./app.css";
+import "./App.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
