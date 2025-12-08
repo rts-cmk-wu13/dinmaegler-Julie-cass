@@ -1,13 +1,15 @@
 import React from "react";
-import Workerdetail from "../components/workerDetail/Workerdetail.jsx";
+// ...existing code...
+// ensure this matches the actual filename (case-sensitive)
+import WorkerDetail from "../components/workerDetail/WorkerDetail.jsx";
 import PagesBg from "../components/pagesTitles/pagesBg.jsx";  
 
-
 function Worker() {
-    return (
-        <>
-        <PagesBg />
-        <Workerdetail />
-        </>
-    );
-} export default Worker;
+  return (
+    <>
+      <PagesBg />
+      <WorkerDetail />
+    </>
+  );
+}
+export default Worker;
