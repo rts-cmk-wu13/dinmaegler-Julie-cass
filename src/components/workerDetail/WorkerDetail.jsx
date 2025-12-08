@@ -1,5 +1,5 @@
 import React from "react";
-import "./detailworker-scss/workerDetail.scss";
+import "./detailworker-scss/workerdetail.scss";
 
 import PropSearch from "./propSearch.jsx";
 import DetailAd from "./detailAd.jsx";
